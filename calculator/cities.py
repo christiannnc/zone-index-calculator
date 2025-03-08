@@ -3,6 +3,8 @@ MED = 'med'
 HIGH = 'high'
 ALT_HIGH = 'alt_high'
 
+# hard-coded data about each city that is used for calculating
+# that city's zoning index
 def initalize():
     return {
         'phoenix': {
