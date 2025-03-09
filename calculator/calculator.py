@@ -80,7 +80,7 @@ def main():
     initialized_cities = initalize()
 
     for key in initialized_cities:
-        data = pd.read_csv(f"./data/{key}_zoning.csv")
+        data = pd.read_csv(f"../data/{key}_zoning.csv")
         drop_key = initialized_cities[key]['drop']
 
         if drop_key != None:
@@ -103,7 +103,7 @@ def main():
             'density_distributions': format_density_distribution(initialized_cities[key])
         }
 
-    with open('metrics.json', 'w') as file:
+    with open('../metrics.json', 'w') as file:
         json.dump(city_metrics, file)
     
     print('done!')
